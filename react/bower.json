@@ -1,0 +1,19 @@
+{
+  "name": "Learning React",
+  "homepage": "https://github.com/CodeTaha/d3-practice",
+  "authors": [
+    "Codetaha <taha.kachwala21@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/vendor",
+    "test",
+    "tests"
+  ]
+}
