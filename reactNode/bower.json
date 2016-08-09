@@ -1,0 +1,21 @@
+{
+  "name": "react-node",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "codetaha <taha.kachwala21@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/CodeTaha/d3-practice",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.2.1"
+  }
+}
