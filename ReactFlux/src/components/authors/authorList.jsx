@@ -1,18 +1,22 @@
 "use strict";
 
 var React = require('react');
-
+var Link = require('react-router').Link;
 var AuthorList = React.createClass({
 	propTypes: {
 		// Checks if prop is passed by the Parent component
 		authors: React.PropTypes.array.isRequired
 	},
 	render: function() {
+		// <a href={"/#author/" + author.id}>{author.id}</a>
 		var createAuthorRow = function(author) {
 			return (
 				<tr key={author.id}>
 					<td>
-						<a href={"/#authors/" + author.id}>{author.id}</a>
+						<Link to="manageAuthor" params={{id: author.id}}>
+							{author.id}
+						</Link>
+						
 					</td>
 					<td>
 						{author.firstName} {author.lastName}
