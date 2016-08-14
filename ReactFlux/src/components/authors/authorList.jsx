@@ -2,21 +2,34 @@
 
 var React = require('react');
 var Link = require('react-router').Link;
+var AuthorActions = require('../../actions/authorActions');
+var toastr = require('toastr');
+
 var AuthorList = React.createClass({
 	propTypes: {
 		// Checks if prop is passed by the Parent component
 		authors: React.PropTypes.array.isRequired
 	},
+
+	deleteAuthor: function(id,event){
+		event.preventDefault();
+		debugger;
+		AuthorActions.deleteAuthor(id);
+		toastr.success('Author Deleted');
+	},
+
 	render: function() {
 		// <a href={"/#author/" + author.id}>{author.id}</a>
 		var createAuthorRow = function(author) {
 			return (
 				<tr key={author.id}>
 					<td>
+						<a href="#" onClick={this.deleteAuthor.bind(this, author.id)}>Delete</a>
+					</td>
+					<td>
 						<Link to="manageAuthor" params={{id: author.id}}>
 							{author.id}
 						</Link>
-						
 					</td>
 					<td>
 						{author.firstName} {author.lastName}
@@ -29,6 +42,7 @@ var AuthorList = React.createClass({
 				<table className="table">
 					<thead>
 						<tr>
+							<th></th>
 							<th>ID</th>
 							<th>Name</th>
 						</tr>

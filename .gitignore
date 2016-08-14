@@ -1,2 +1,3 @@
 ReactFlux/dist/*
+**/node_modules/**
 
